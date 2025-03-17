@@ -66,27 +66,29 @@ rudderanalytics.ready(() => {
                            }
                             );
 
-                            let startupGnS =  startupGnSfn();
+                           
                             console.log("startup G&S");
 
-                            async function startupGnSfn() {
-                                // code for amplitude G&S
-                                await window.engagement.boot({
-                                  user: {
-                                    // User Provider: Guides and Surveys requires either user_id or device_id for user identification
-                                    device_id: deviceID
-                                  },
-                                  integrations: [
+                            window.engagement.boot({
+                                              user: {
+                                                device_id: deviceID,
+                                                user_properties: {}
+                                              },
+                                              integrations: [
                                     {
                                       // Tracking Provider: Pass Guides and Surveys events to the 3rd party analytics provier
                                       track: (event) => {
                                         rudderanalytics.track(event.event_type, event.event_properties)
                                       }
                                     },
-                                  ],
-                                  });
-                              
-                                                          }
+                                  ]
+                                            }).then(() => {
+                                              console.log('Guides and Surveys SDK initialized successfully');
+                                            }).catch((error) => {
+                                              console.error('Failed to initialize Guides and Surveys SDK:', error);
+                                            });
+
+                            
                               });
 
 
@@ -125,4 +127,3 @@ rudderanalytics.ready(() => {
     </div>
   </body>
 </html>
-
