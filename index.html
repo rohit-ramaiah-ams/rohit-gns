@@ -66,10 +66,10 @@ rudderanalytics.ready(() => {
                            }
                             );
 
-                            let startupGnS =  startupGnS();
+                            let startupGnS =  startupGnSfn();
                             console.log("startup G&S");
 
-                            async function startupGnS() {
+                            async function startupGnSfn() {
                                 // code for amplitude G&S
                                 await window.engagement.boot({
                                   user: {
