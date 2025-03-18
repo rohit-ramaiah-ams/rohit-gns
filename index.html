@@ -71,7 +71,7 @@ rudderanalytics.ready(() => {
 
                             window.engagement.boot({
                                               user: {
-                                                device_id: deviceID,
+                                                device_id: deviceID
                                                 user_properties: {}
                                               },
                                               integrations: [
@@ -88,8 +88,16 @@ rudderanalytics.ready(() => {
                                               console.error('Failed to initialize Guides and Surveys SDK:', error);
                                             });
 
+                
+
+                                            function memoInteracted()
+                                                {
+                                                    console.log("Memo Interacted Event");
+                                                }
                             
                               });
+
+
 
 
 
@@ -113,7 +121,7 @@ rudderanalytics.ready(() => {
                   <option value="Medium">Medium</option>
                   <option value="High">High</option>
                 </select>
-		<button type="submit" id="add-memo" class="pure-button pure-button-primary">Add</button>
+		<button type="submit" id="add-memo" class="pure-button pure-button-primary" onClick="memoInteracted()">Add</button>
 	  </fieldset>
 	<hr>
         </form>
