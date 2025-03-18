@@ -16,6 +16,7 @@
 
             rudderanalytics.track( "MemoInteracted" , {},  () => {
       console.log("MemoInteractedEvent Tracked via Rudderstack analytics");
+      window.engagement.forwardEvent({ event_type: event, event_properties: properties});
       }
       );
    
