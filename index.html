@@ -92,7 +92,7 @@ rudderanalytics.ready(() => {
                               });
 
                               document.addEventListener('DOMContentLoaded', function() {
-                                document.getElementById('add-memo').addEventListener('submit', memoAdded);
+                                document.getElementById('memo-input-form').addEventListener('submit', memoAdded);
                                
                                 });
 
@@ -121,7 +121,7 @@ rudderanalytics.ready(() => {
                   <option value="Medium">Medium</option>
                   <option value="High">High</option>
                 </select>
-		<button type="submit" id="add-memo" class="pure-button pure-button-primary" onClick="memoInteracted()">Add</button>
+		<button type="submit" id="add-memo" class="pure-button pure-button-primary">Add</button>
 	  </fieldset>
 	<hr>
         </form>
