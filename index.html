@@ -13,6 +13,14 @@
         $(document).ready(function(){
           $("#add-memo").click(function() {
             console.log("MemoInteracted");
+
+            rudderanalytics.track( "MemoInteracted" , {},  () => {
+      console.log("MemoInteractedEvent Tracked via Rudderstack analytics");
+      }
+      );
+   
+        
+   
           });
         });
     </script> 
