@@ -90,15 +90,6 @@ rudderanalytics.ready(() => {
                             
                               });
 
-                              document.addEventListener('DOMContentLoaded', function() {
-                                document.getElementById('memo-input-form').addEventListener('submit', memoAdded);
-                               
-                                });
-
-                                
-                    
-                                }
-
     $("#add-memo").click(function() {
     console.log("MemoInteracted");
     rudderanalytics.track( "MemoInteracted" , {},  () => {
@@ -110,6 +101,8 @@ rudderanalytics.ready(() => {
         
    
           });
+
+        });
 
 
 </script>
