@@ -88,18 +88,18 @@ rudderanalytics.ready(() => {
                                               console.error('Failed to initialize Guides and Surveys SDK:', error);
                                             });
 
-                
-
-                                            function memoInteracted()
-                                                {
-                                                    console.log("Memo Interacted Event");
-                                                }
                             
                               });
 
+                              document.addEventListener('DOMContentLoaded', function() {
+                                document.getElementById('add-memo').addEventListener('submit', memoAdded);
+                               
+                                });
 
-
-
+                                function memoAdded(e) {
+                                    console.log("memo added");
+                    
+                                }
 
 
 </script>
