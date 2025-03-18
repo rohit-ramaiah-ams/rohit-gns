@@ -93,12 +93,7 @@ rudderanalytics.ready(() => {
     $("#add-memo").click(function() {
     console.log("MemoInteracted");
     
-    const event = {
-      event_type: "MemoInteracted"
-    }
-
-   
-
+    const event = "MemoInteracted";
     rudderanalytics.track( event, {},() => {
     console.log("MemoInteractedEvent Tracked via Rudderstack analytics");
     window.engagement.forwardEvent({ event: event});
