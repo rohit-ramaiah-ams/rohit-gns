@@ -49,7 +49,7 @@ function saveMemo(e) {
   var memoId = create_UUID();
   var memoStatus = 'Open';
 
-  amplitude.track('Memo Interacted', {'action': 'add', 'priority': memoPriority, 'memo_id': memoId}); 
+ // amplitude.track('Memo Interacted', {'action': 'add', 'priority': memoPriority, 'memo_id': memoId}); 
 
   var memo = {
     id: memoId,
@@ -82,7 +82,7 @@ function setStatusDone(id) {
   for (var i = 0; i < memos.length; i++) {
     if (memos[i].id == id) {
       memos[i].status = 'Done';
-      amplitude.track('Memo Interacted', {'action': 'close', 'priority': memos[i].priority, 'memo_id': id}); 
+     // amplitude.track('Memo Interacted', {'action': 'close', 'priority': memos[i].priority, 'memo_id': id}); 
     }
   }
 
@@ -97,7 +97,7 @@ function deleteMemo(id) {
 
   for (var i = 0; i < memos.length; i++) {
     if (memos[i].id == id) {
-      amplitude.track('Memo Interacted', {'action': 'delete', 'priority': memos[i].priority, 'memo_id': id}); 
+     // amplitude.track('Memo Interacted', {'action': 'delete', 'priority': memos[i].priority, 'memo_id': id}); 
       memos.splice(i, 1);
     }
   }
